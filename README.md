@@ -1,9 +1,10 @@
 ## Website for my CV
 
 **LINKEDIn:** https://www.linkedin.com/in/edison-j-abahurire-973997123/
+[facebook](https://www.facebook.com/abahedison)	
+
 
 ## Features
-
 -  Fully Responsive
 -  HTML5 + CSS3
 -  Built on Bootstrap 4
