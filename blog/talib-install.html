@@ -18,7 +18,7 @@ include_js: false
 
     <!-- <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico"> -->
 
-    <title>Edison Abahurire</title>
+    <title>Install TA-Lib C Library on Windows 10 - Edison Abahurire</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -29,12 +29,11 @@ include_js: false
 </head>
 
 <body>
-
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="mb-auto">
             <div>
                 <nav class="nav nav-masthead justify-content-center float-md-center">
-                    <a class='nav-link homelink'>
+                    <a class='nav-link homelink' href='http://simicode.github.io/blog'>
                         <h4>BLOG</h4>
                     </a>
                     <a class="nav-link homelink active" aria-current="page" href="http://simicode.github.io/">
@@ -44,23 +43,29 @@ include_js: false
             </div>
         </header>
 
-        <main class="">
-            <div class="card blogpost">
-                <h5 class="card-header">August 2020</h5>
-                <div class="card-body">
-                    <h5 class="card-title"> &#8669 <a href="flitmeme.html">I made a meme</a></h5>
-                    <h5 class="card-title"> &#8669 <a href="prefixes.html">Exploring string prefixes in Python</a></h5>
-                    <h5 class="card-title"> &#8669 <a href="talib-install.html">Install TA-Lib C Library on Windows
-                            10 X64</a></h5>
-                </div>
-            </div>
+        <main class="px-3">
+            <h3>Install TA-Lib C Library on Windows 10 X64</h3>
+            <p class='date'>29/08/2020</p>
 
+            <ul>
+                <li>Download and Unzip <a href="https://tenet.dl.sourceforge.net/project/ta-lib/ta-lib/0.4.0/ta-lib-0.4.0-msvc.zip">ta-lib-0.4.0-msvc.zip</a></li>
+                <li>Move the Unzipped Folder ta-lib to C:\</li>
+                <li>Download and Install Visual Studio Community 2015<br />Remember to Select [Visual C++] Feature</li>
+                <li>Build TA-Lib Library: <br />- From Windows Start Menu, Start [VS2015 x64 Native Tools Command
+                    Prompt]<br />- Move to C:\ta-lib\c\make\cdr\win32\msvc > <code>cd C:\ta-lib\c\make\cdr\win32\msvc</code><br />- Build the Library nmake</li>
+                <li>Then pip3 install ta-lib</li>
+            </ul>
+
+            <br>
+            <p>Reference: <a href='https://github.com/mrjbq7/ta-lib/issues/127#issuecomment-280222942'>Failed to install
+                    ta-lib #127</a></p>
+            </p>
         </main>
 
         <p class="lead">
-        <div class="">&nbsp;&nbsp;&nbsp; I'm Social, Let's connect on<br>
+        <div class="">&nbsp;&nbsp;&nbsp; I'm Social, Let's connect:<br>
             <a href="mailto:abxahexdison@gxmailx.com" onmouseover="this.href=this.href.replace(/x/g,'');"
-                class="fa fa-envelope" href="https://stackoverflow.com/users/7806024/simic0de"></a>
+                class="fa fa-envelope" href="https://twitter.com/eabahurire"></a>
             <a class="fa fa-linkedin" href="https://www.linkedin.com/in/edisonabahurire/"></a>
             <a class="fa fa-twitter" href="https://twitter.com/eabahurire"></a>
             <a class="fa fa-github" href="https://github.com/SimiCode"></a>
