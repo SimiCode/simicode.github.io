@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Edison Abahurire">
+    <meta name="description" content="Edison Abahurire, Data Engineeer, Backend Developer, Data processing Pipelines">
+    <title>Edison Abahurire</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body class="text-center">
+    <style>
+        .form-group {
+            display: inline-block;
+            position: absolute;
+            top: 30%;
+            left: 40%;
+        }
+
+        .form-control-file {
+            background-color: aqua;
+        }
+    </style>
+
+    <form class="text-center">
+        <div class="form-group">
+            <label for="text">Input Search Text: </label>
+            <input type="text" id="fname" name="fname"><br>
+            <!-- <label for="exampleFormControlFile1">Upload Excel file</label> -->
+            <input type="file" class="form-control-file" id="exampleFormControlFile1" onchange="SavePhoto(this)">
+            <br>
+            <!-- <button type="submit" class="btn btn-primary mb-2">Process</button> -->
+        </div>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+    <script>
+        window.SavePhoto = async function SavePhoto(e) {
+            let excel_file = e.files[0];
+            var reader = new FileReader();
+            var text_str = document.getElementById("fname").value;
+            var ip_rows = []
+            // console.log(text_str);
+
+            reader.onload = function (e) {
+                var data = e.target.result;
+
+                try {
+                    var workbook = XLSX.read(data, {
+                        type: 'binary'
+                    });
+                } catch {
+                    alert('Invalid file type!')
+                };
+
+                workbook.SheetNames.forEach(function(sheetName) {
+                    // Here is your object
+                    var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+                    var json_object = XL_row_object;
+
+                    headers = Object.keys(XL_row_object[0]);
+                    var arrayLength = json_object.length;
+                    for (var i = 0; i < arrayLength; i++) {
+                        row_ = json_object[i]
+                        ip_column = row_["IP Control Container"]
+                        ip_adress = ip_column.split('(')[1];
+                        ip_adress = ip_adress.split(')')[0];
+                        if (ip_adress.includes(text_str)) {
+                            // console.log(ip_adress);
+                            row_ = Object.values(row_)
+                            _row_ = []
+                            for (word of row_) {
+                                if (word.includes(',')) {
+                                    console.log(word, word.replace(',', ''))
+                                }
+                                _row_.push(word.replace(',', ''))
+                            }
+                            ip_rows.push(_row_)
+                        };
+                    }
+
+                    let csv_str = "";
+                    const tableData = [];
+                    tableData.push(headers.join(","));
+
+                    for (const row of ip_rows) {
+                        // const rowData = [];
+                        // for (const column of row) {
+                        //     rowData.push(column);
+                        // }
+                        tableData.push(row.join(","));
+                    }
+
+                    console.log(tableData);
+
+                    csv_str += tableData.join("\n");
+                    const a = document.createElement("a");
+                    a.href = URL.createObjectURL(new Blob([csv_str], { type: "text/csv" }));
+                    a.setAttribute("download", "Results.csv");
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+
+                })
+
+            };
+
+            reader.onerror = function (ex) {
+                // console.log(ex);
+            };
+
+            reader.readAsBinaryString(excel_file);
+        };
+    </script>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!-- ---
+layout: examples
+title: Cover Template
+extra_css:
+  - "cover.css"
+html_class: "h-100"
+body_class: "d-flex h-100 text-center text-white bg-dark"
+include_js: false
+--- -->
+<!-- CSS only -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="">
+    <meta name="description" content="">
+
+    <!-- <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico"> -->
+
+    <title>Install TA-Lib C Library on Windows 10 - Edison Abahurire</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <nav class="nav nav-masthead justify-content-center float-md-center">
+                    <a class='nav-link homelink' href='http://simicode.github.io/blog'>
+                        <h4>BLOG</h4>
+                    </a>
+                    <a class="nav-link homelink active" aria-current="page" href="http://simicode.github.io/">
+                        <h4> HOME</h4>
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="px-3">
+            <h3>Install TA-Lib C Library on Windows 10 X64</h3>
+            <p class='date'>29/08/2020</p>
+
+            <ul>
+                <li>Download and Unzip <a href="https://tenet.dl.sourceforge.net/project/ta-lib/ta-lib/0.4.0/ta-lib-0.4.0-msvc.zip">ta-lib-0.4.0-msvc.zip</a></li>
+                <li>Move the Unzipped Folder ta-lib to C:\</li>
+                <li>Download and Install Visual Studio Community 2015<br />Remember to Select [Visual C++] Feature</li>
+                <li>Build TA-Lib Library: <br />- From Windows Start Menu, Start [VS2015 x64 Native Tools Command
+                    Prompt]<br />- Move to C:\ta-lib\c\make\cdr\win32\msvc > <code>cd C:\ta-lib\c\make\cdr\win32\msvc</code><br />- Build the Library nmake</li>
+                <li>Then pip3 install ta-lib</li>
+            </ul>
+
+            <br>
+            <p>Reference: <a href='https://github.com/mrjbq7/ta-lib/issues/127#issuecomment-280222942'>Failed to install
+                    ta-lib #127</a></p>
+            </p>
+        </main>
+
+        <p class="lead">
+        <div class="">&nbsp;&nbsp;&nbsp; I'm Social, Let's connect:<br>
+            <a href="mailto:abxahexdison@gxmailx.com" onmouseover="this.href=this.href.replace(/x/g,'');"
+                class="fa fa-envelope" href="https://twitter.com/eabahurire"></a>
+            <a class="fa fa-linkedin" href="https://www.linkedin.com/in/edisonabahurire/"></a>
+            <a class="fa fa-twitter" href="https://twitter.com/eabahurire"></a>
+            <a class="fa fa-github" href="https://github.com/SimiCode"></a>
+            <a class="fa fa-facebook" href="https://www.facebook.com/abahedison"></a>
+            <a class="fa fa-stack-overflow" href="https://stackoverflow.com/users/7806024/simic0de"></a>
+            <a class="fa fa-medium" href="https://medium.com/@simicode"></a>
+        </div>
+        </p>
+
+        <div class="mt-auto text-white-50">
+        </div>
+    </div>
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

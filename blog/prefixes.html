@@ -1,0 +1,107 @@
+<!-- ---
+layout: examples
+title: Cover Template
+extra_css:
+  - "cover.css"
+html_class: "h-100"
+body_class: "d-flex h-100 text-center text-white bg-dark"
+include_js: false
+--- -->
+<!-- CSS only -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="">
+        <meta name="description" content="">
+
+        <!-- <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico"> -->
+
+        <title>Edison Abahurire</title>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Custom styles for this template -->
+        <link href="blog.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="mb-auto">
+                <div>
+                    <nav class="nav nav-masthead justify-content-center float-md-center">
+                        <a class='nav-link homelink' href='http://simicode.github.io/blog'><h4>BLOG</h4></a>
+                        <a class="nav-link homelink active" aria-current="page" href="http://simicode.github.io/"><h4> HOME</h4></a>
+                    </nav>
+                </div>
+            </header>
+    
+            <main class="px-3">
+                <h3>Exploring string prefixes in Python</h3>
+                <p>10/08/2020</p>
+
+                <br>
+                <p class="lead">
+                    <b>1. the r prefix</b><br>
+                    When an 'r' or 'R' prefix is present, a character following a backslash is included in the string without change, and all backslashes are left in the string.  
+                    This prefix can be used for representing <br>
+                    <b>> file-paths </b><br>
+                    <code>fpath = "C:/Users/Desktop/File.py"</code><br>
+                    
+                    <b>> and URLs. </b><br>
+                    <code>url = "https://getbootstrap.com/docs/4.0/content/code/"</code><br>
+                    NOTE: A 'u' or 'b' prefix may be followed by an 'r' prefix.<br>
+
+                    <br><b>2. the b prefix</b><br>
+                    The 'b' prefix signifies a bytes string literal.<br>
+                    If you see it used in Python 3 source code, the expression creates a bytes object, not a regular Unicode str object. If you see it echoed in your Python shell or as part of a list, dict or other container contents, then you see a bytes object represented using this notation.
+                    <br><code>
+                        >>> s = b'bytestr' <br>
+                        >>> type(s) <br>
+                        &lt;class 'bytes'&gt;
+                    </code><br>
+
+                    <br><b>2. the u prefix</b><br>
+                    A prefix of 'u' or 'U' makes the string a Unicode string. Unicode strings use the Unicode character set as defined by the Unicode Consortium and ISO 10646. 
+                    An example of a unicode usecase is printing non english alphabet characters.
+                    <br><code>
+                        >>> s = u'\u0420\u043e\u0441\u0441\u0438\u044f' <br>
+                        'Россия'
+                    </code><br>
+
+                    <br>
+                    <p>Reference: <a href='https://docs.python.org/2/reference/lexical_analysis.html#string-literals'>More on string literals</a></p>
+                </p>
+
+            </main>
+
+            <p class="lead">
+                <div class="">&nbsp;&nbsp;&nbsp; I'm Social, Let's connect:<br>
+                    <a href="mailto:abxahexdison@gxmailx.com" onmouseover="this.href=this.href.replace(/x/g,'');" 
+                    class="fa fa-envelope" href="https://twitter.com/eabahurire"></a>
+                    <a class="fa fa-linkedin" href="https://www.linkedin.com/in/edisonabahurire/"></a>
+                    <a class="fa fa-twitter" href="https://twitter.com/eabahurire"></a>
+                    <a class="fa fa-github" href="https://github.com/SimiCode"></a>
+                    <a class="fa fa-facebook" href="https://www.facebook.com/abahedison"></a>
+                    <a class="fa fa-stack-overflow" href="https://stackoverflow.com/users/7806024/simic0de"></a>
+                    <a class="fa fa-medium" href="https://medium.com/@simicode"></a>
+                </div>
+            </p>
+
+            <div class="mt-auto text-white-50">
+            </div>
+        </div>
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+    </body>
+</html>
