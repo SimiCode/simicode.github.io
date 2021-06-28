@@ -1,0 +1,102 @@
+body {
+  display: -ms-flexbox;
+  -ms-flex-pack: center;
+}
+
+code {
+  background-color: lightgrey;
+}
+
+.cover-container, header {
+  max-width: 60em;
+  padding: 0;
+}
+
+.blogpost {
+  margin-bottom: 20px;
+}
+
+.blogpost > span {
+  padding: 3px;
+  padding-left: 20px;
+}
+
+.card-header {
+  /* color: #00C420; */
+  color: #FF5733;
+  font-weight: bolder;
+}
+
+a {
+  color: #0074D9;
+}
+
+.homelink {
+  padding: 20px;
+  color: grey;
+}
+
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+
+.mastfoot {
+  color: rgba(255, 255, 255, .5);
+}
+
+
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+/* Add a hover effect if you want */
+.fa:hover {
+opacity: 0.5;
+text-decoration: none;
+}
+
+.lead {
+    font-size: 18px;
+}
+
+span.reverse {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+nav {
+  background-color: #E2E7FF;
+  font-weight: bolder;
+}
+
+body {
+  background-color: rgba(0,0,0,.03);
+}
+
+.card-header {
+  background-color: #bfbfbf;
+}
+
+.menu {
+  margin-top: 20px; 
+  margin-bottom: 30px; 
+  font-weight: bold;
+}
