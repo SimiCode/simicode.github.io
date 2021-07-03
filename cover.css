@@ -6,12 +6,12 @@
 a,
 a:focus,
 a:hover {
-  color: #fff;
+  color: #b3d7ff;
 }
 
 a {
     text-decoration: underline;
-    text-decoration-color: #ADE7B1;
+    /* text-decoration-color: #ADE7B1; */
 }
 
 /* Custom default button */
@@ -152,6 +152,10 @@ span.reverse {
     font-size: 1.15em;
     font-weight: 350;
   }
+  body {
+    height: 150%;
+    background-color: rgb(24, 24, 24);
+  }  
 }
 
 
