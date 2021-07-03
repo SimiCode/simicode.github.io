@@ -138,3 +138,11 @@ span.reverse {
   unicode-bidi: bidi-override;
   direction: rtl;
 }
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .lead {
+    font-size: 15px;
+  }
+}
