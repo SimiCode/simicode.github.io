@@ -160,3 +160,10 @@ span.reverse {
     font-size: 15px;
   }
 }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .lead {
+    max-width: 22.5em;
+  }
+}
