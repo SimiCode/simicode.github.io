@@ -142,6 +142,20 @@ span.reverse {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.65em;
+  }
+  h3 {
+    font-size: 1.25em;
+  }
+  .lead {
+    font-size: 15px;
+  }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
   .lead {
     font-size: 15px;
   }
